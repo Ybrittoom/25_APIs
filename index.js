@@ -293,6 +293,22 @@ app.delete('/api-25/fone/:id', (req, res) =>{
     res.json({ message: "Deletado com sucesso"})
 })
 
+//14.bebidas
+app.get('/api-25/bebidas', (req, res) => {
+    res.json([
+        {id: 1, nome: ""}
+    ])
+})
+app.post('/api-25/bebidas', (req, res) => {
+
+})
+app.put('/api-25/bebidas/:id', (req, res) => {
+
+})
+app.delete('/api-25/bebidas/:id', (req, res) => {
+
+})
+
 app.listen(port, () => {('/api-25/suplemento', (req, res) => {
 
 })
