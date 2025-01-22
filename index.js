@@ -100,7 +100,201 @@ app.delete('/api-25/animal/:id', (req, res) => {
     res.json({ message: "AnImAl DeLeTaDo"})
 })
 
+//5.alunos
+app.get('/api-25/alunos', (req, res) => {
+    res.json([
+        {id: 1, nome: "Yago"},
+        {id: 2, nome: "Kaua"},
+        {id: 3, nome: "Neemias"},
+        {id: 4, nome: "Diogo"}
+    ])
+})
+app.post('/api-25/alunos', (req, res) => {
+    const { nome } = req.body
+    res.json({ message: "Aluno adicionado"})
+})
+app.put('/api-25/alunos/:id', (req, res) => {
+    const { id } = req.params
+    const { nome } = req.body
+    res.json({ message: "Aluno atulizado"})
+})
+app.delete('/api-25/alunos/:id', (req, res) => {
+    const { id } = req.params
+    res.json({ message: "Aluno deletado"})
+})
 
-app.listen(port, () => {
+//6.carros
+app.get('/api-25/carros', (req, res) => {
+    res.json([
+        {id: 1, marca: "BMW", ano: 2023},
+        {id: 2, marca: "Porche", ano: 2020}
+    ])
+})
+app.post('/api-25/carros', (req, res) => {
+    const { marca, ano } = req.body
+    res.json({ message: "Carro adicionado com sucesso!"})
+})
+app.put('/api-25/carros/:id', (req, res) => {
+    const { id } = req.params
+    const { marca, ano } = req.body
+    res.json({ message: "Carro atualizado"})
+})
+app.delete('/api-25/carros/:id', (req, res) => {
+    const { id } = req.params
+    res.json({ message: "carro deletado"})
+})
+
+//7.cpu
+app.get('/api-25/cpu', (req, res) => {
+    res.json([
+        {id: 1, nome: "Intel i3"},
+        {id: 2, nome: "R 5 5000"},
+        {id: 3, nome: "Intel i7"}
+    ])
+})
+app.post('/api-25/cpu', (req, res) => {
+    const { nome } = req.body
+    res.json({ message: "Cpu adicionda"})
+})
+app.put('/api-25/cpu/:id', (req, res) => {
+    const { id } = req.params
+    const { nome } = req.body
+    res.json({ message: "Cpu atualizada"})
+})
+app.delete('/api-25/cpu/:id', (req, res) => {
+    const { id } = req.params
+    res.json({ message: "Cpu deletada"})
+})
+//8.celular
+app.get('/api-25/celular', (req, res) => {
+    res.json([
+        {id: 1, marca: "Samsung"},
+        {id: 2, marca: "Apple"},
+        {id: 3, marca: "Motorola"}
+    ])
+})
+app.post('/api-25/celular', (req, res) => {
+    const { marca } = req.body
+    res.json({ message: "Adicionado com sucesso"})
+})
+app.put('/api-25/celular/:id', (req, res) => {
+    const { id } = req.params
+    const { marca } = req.body
+    res.json({ message: "Atualizado com sucesso"})
+})
+app.delete('/api-25/celular/:id', (req, res) => {   
+    const { id } = req.params
+    res.json({ message: "deletado com sucesso"})
+})
+
+//9.comida
+app.get('/api-25/comida', (req, res) => {
+    res.json([
+        {id: 1, nome: "Pizza"},
+        {id: 2, nome: "Maça"}
+
+    ])
+})
+app.post('/api-25/comida', (req, res) => {
+    const { nome } = req.body
+    res.json({ message: "Adicionado"})
+})
+app.put('/api-25/comida/:id', (req, res) => {
+    const { id } = req.params
+    const { nome } = req.body
+    res.json({ message: "Atualizada"})
+})
+app.delete('/api-25/comida/:id', (req, res) => {
+    const { id } = req.params
+    res.json({ message: "deletado"})
+})
+
+//10.suplemento
+app.get('/api-25/suplemento', (req, res) => {
+    res.json([
+        {id: 1, nome: "Creatina"},
+        {id: 2, nome: "Whey"}
+    ])
+})  
+app.post('/api-25/suplemento', (req, res) => {
+    const { nome } = req.body
+    res.json({ message: "Suplemento adicionado com sucesso!!!"})
+})
+app.put('/api-25/suplemento/:id', (req, res) => {
+    const { id } = req.params
+    const { nome } = req.body
+    res.json({ message: "Suplemento atualizado com sucesso!!", nome})
+})
+app.delete  ('/api-25/suplemento/:id', (req, res) => {
+    const { id } = req.params
+    res.json({ message: "Suplemento deletado com sucesso!!!"})
+})
+
+//11.Petisco
+app.get('/api-25/petisco', (req, res) => {
+    res.json([
+        {id: 1, nome: "joyCook"},
+        {id: 2, nome: "JoyBeef"}
+    ])
+})
+app.post('/api-25/petisco', (req, res) => {
+    const { nome } = req.body
+    res.json({ message: "Adicionado com sucesso", nome})
+})
+app.put('/api-25/petisco/:id', (req, res) => {
+    const { id } = req.params
+    const { nome } = req.body
+    res.json({ message: "Atualizado com sucesso", nome})
+})
+app.delete('/api-25/petisco/:id', (req, res) => {
+    const { id } = req.params
+    res.json({ message: "deletado com sucesso:", id})
+})
+
+//12.gpu
+app.get('/api-25/gpu', (req, res) => {
+    res.json([
+        {id: 1, nome: "Rtx 3050"},
+        {id: 2, nome: "rtx 2050"}
+    ])
+})
+app.post('/api-25/gpu', (req, res) => {
+    const { nome } = req.body
+    res.json({ message: "Adicionado com sucesso!!", nome})
+})
+app.put('/api-25/gpu/:id', (req, res) => {
+    const { id } = req.params
+    const { nome } = req.body
+    res.json({ message: "Atualizado com sucesso", nome})
+})
+app.delete('/api-25/gpu/:id', (req, res) => {
+    const { id } = req.params
+    res.json({ message: "Deletado com sucesso", id})
+})
+
+//13.fone de ouvido
+app.get('/api-25/fone', (req, res) =>{
+    res.json([
+        {id: 1, nome: "qcy-t13"},
+        {id: 2, nome: "soundcore"}
+    ])
+})
+app.post('/api-25/fone', (req, res) =>{
+    const { nome } = req.body
+    res.json({ message: "Adicionado com sucesso"})
+})
+app.put('/api-25/fone/:id', (req, res) =>{
+    const { id } = req.params
+    const { nome } = req.body
+    res.json({ message: "Atualizado com sucesso"})
+})
+app.delete('/api-25/fone/:id', (req, res) =>{
+    const { id } = req.params
+    res.json({ message: "Deletado com sucesso"})
+})
+
+app.listen(port, () => {('/api-25/suplemento', (req, res) => {
+
+})
     console.log(`Servidor rodando em http://localhost:${port}`)
 })
