@@ -296,17 +296,255 @@ app.delete('/api-25/fone/:id', (req, res) =>{
 //14.bebidas
 app.get('/api-25/bebidas', (req, res) => {
     res.json([
-        {id: 1, nome: ""}
+        {id: 1, nome: "coca-cola"},
+        {id: 2, nome: "Fanta"}
     ])
 })
 app.post('/api-25/bebidas', (req, res) => {
-
+    const { nome } = req.body
+    res.json({ message: "Adicionado com sucesso!!"})
 })
 app.put('/api-25/bebidas/:id', (req, res) => {
-
+    const { id }= req.params
+    const { nome } = req.body
+    res.json({ message: "Atualizado com sucesso!!"})
 })
 app.delete('/api-25/bebidas/:id', (req, res) => {
+    const { id } = req.params
+    res.json({ message: "Deletado com sucesso"})
+})
 
+
+//15.Urso
+app.get('/api-25/urso', (req, res) => {
+    res.json([
+        {id: 1, nome: "Polar"},
+        {id: 2, nome: "Pardo"}
+    ])
+})
+app.post('/api-25/urso', (req, res) => {
+    const { nome } = req.body
+    res.json({ message: "Adicionado com sucesso!!!"})
+})
+app.put('/api-25/urso/:id', (req, res) => {
+    const { id } = req.params
+    const { nome } = req.body
+    res.json({ message: "Atualizado com sucesso!!!"})
+})
+app.delete('/api-25/urso/:id', (req, res) => {
+    const { id} = req.params
+    res.json({ message: "Deletado com sucesso"})
+})
+
+//16.escola
+app.get('/api-25/escola', (req, res) => {
+    res.json([
+        {id: 1, nome: "Antonio do valle"},
+        {id: 2, nome: "Leandro F."}
+    ])
+})
+app.post('/api-25/escola', (req, res) => {
+    const { nome } = req.body
+    res.json({ message: "Adicionado com sucesso"})
+})
+app.put('/api-25/escola/:id', (req, res) => {
+    const { id } = req.params
+    const { nome } = req.body
+    res.json({ message: "Atualizado com sucesso"})
+})
+app.delete('/api-25/escola/:id', (req, res) => {
+    const { id } = req.params
+    res.json({ message: "Deletado com sucesso"})
+})
+
+//17.Lapis
+app.get('/api-25/lapis', (req, res) => {
+    res.json([
+        {id: 1, nome: "faber"},
+        {id: 2, nome: "LeoLeo"}
+    ])
+})
+app.post('/api-25/lapis', (req, res) => {
+    const { nome } = req.body
+    res.json({ message: "Adicionado com sucesso"})
+})
+app.put('/api-25/lapis/:id', (req, res) => {
+    const { id } = req.params
+    const { nome } = req.body
+    res.json({ message: "Atualizado com sucesso"})
+})
+app.delete('/api-25/lapis/:id', (req, res) => {
+    const { id } = req.params
+    res.json({ message: "Deletado com sucesso"})
+})
+
+//18.condominio
+app.get('/api-25/condominio', (req, res) => {
+    res.json([
+        {id: 1, nome: "Portal vale das perolas"},
+        {id: 2, nome: "Alphaville"}
+    ])
+})
+app.post('/api-25/condominio', (req, res) => {
+    const { nome } = req.body
+    res.json({ message: "Adicionado com sucesso"}) 
+})
+app.put('/api-25/condominio/:id', (req, res) => {
+    const { id } = req.params
+    const { nome }= req.body
+    res.json({ message: "Atualizado com sucesso"})
+})
+app.delete('/api-25/condominio/:id', (req, res) => {
+    const {id } = req.params
+    res.json({ message: "Deletado com sucesso"})
+})
+
+//19.oculos
+app.get('/api-25/oculos', (req, res) => {
+    res.json([
+        {id: 1, nome: "Oakley radar"},
+        {id: 2, nome: "Tata martelo"}
+    ])
+})
+app.post('/api-25/oculos', (req, res) => {
+    const { nome } = req.body
+    res.json({ message: "Adicionado com sucesso"})
+})
+app.put('/api-25/oculos/:id', (req, res) => {
+    const { id } = req.params
+    const { nome } = req.body
+    res.json({ message: "Atualizado com sucesso"})
+})
+app.delete('/api-25/oculos/:id', (req, res) => {
+    const { id } = req.params
+    res.json({ message: "deletado com sucesso"})
+})
+
+//20.remedio
+app.get('/api-25/remedio', (req, res) => {
+    res.json([
+        {id: 1, nome: "Dipirona"},
+        {id: 2, nome: "bezetacio"}
+    ])
+})
+app.post('/api-25/remedio', (req, res) => {
+    const { nome } = req.body
+    res.json({ message: "Adicionado com sucesso"})
+})
+app.put('/api-25/remedio/:id', (req, res) => {
+    const { id } = req.params
+    const { nome } = req.body
+    res.json({ message: "Atualizado com sucesso"})
+})
+app.delete('/api-25/remedio/:id', (req, res) => {
+    const { id } = req.params
+    res.json({ message: "deletado com sucesso"})
+})
+
+
+//21
+app.get('/api-25/banco', (req, res) => {
+    res.json([
+        {id: 1, nome: "inter"},
+        {id: 2, nome: "itau"}
+    ])
+})
+app.post('/api-25/banco', (req, res) => {
+    const { nome } = req.body
+    res.json({ message: "Adicionado com sucesso"})
+})
+app.put('/api-25/banco/:id', (req, res) => {
+    const { id } = req.params
+    const { nome } = req.body
+    res.json({ message: "Atualizado com sucesso"})
+})
+app.delete('/api-25/banco/:id', (req, res) => {
+    const { id } = req.params
+    res.json({ message: "deletado com sucesso"})
+})
+
+//22.Violino
+app.get('/api-25/violino', (req, res) => {
+    res.json([
+        {id: 1, nome: "Stradivarios"},
+        {id: 2, nome: "Guarneri"}
+    ])
+})
+app.post('/api-25/violino', (req, res) => {
+    const { nome } = req.body
+    res.json({ message: "Adicionado com sucesso"})
+})
+app.put('/api-25/violino/:id', (req, res) => {
+    const { id } = req.params
+    const { nome } = req.body
+    res.json({ message: "Atualizado com sucesso"})
+})
+app.delete('/api-25/violino/:id', (req, res) => {
+    const { id } = req.params
+    res.json({ message: "deletado com sucesso"})
+})
+
+//23.sorvete
+app.get('/api-25/sorvete', (req, res) => {
+    res.json([
+        {id: 1, nome: "creme"},
+        {id: 2, nome: "uva"}
+    ])
+})
+app.post('/api-25/sorvete', (req, res) => {
+    const { nome } = req.body
+    res.json({ message: "Adicionado com sucesso"})
+})
+app.put('/api-25/sorvete/:id', (req, res) => {
+    const { id } = req.params
+    const { nome } = req.body
+    res.json({ message: "Atualizado com sucesso"})
+})
+app.delete('/api-25/sorvete/:id', (req, res) => {
+    const { id } = req.params
+    res.json({ message: "deletado com sucesso"})
+})
+
+//24
+app.get('/api-25/garrafa', (req, res) => {
+    res.json([
+        {id: 1, nome: "stanley"},
+        {id: 2, nome: "termica"}
+    ])
+})
+app.post('/api-25/garrafa', (req, res) => {
+    const { nome } = req.body
+    res.json({ message: "Adicionado com sucesso"})
+})
+app.put('/api-25/garrafa/:id', (req, res) => {
+    const { id } = req.params
+    const { nome } = req.body
+    res.json({ message: "Atualizado com sucesso"})
+})
+app.delete('/api-25/garrafa/:id', (req, res) => {
+    const { id } = req.params
+    res.json({ message: "deletado com sucesso"})
+})
+
+//25.comum ccb
+app.get('/api-25/ccb-comum', (req, res) => {
+    res.json([
+        {id: 1, nome: "virginio Basso"},
+        {id: 2, nome: "Jandira"}
+    ])
+})
+app.post('/api-25/ccb-comum', (req, res) => {
+    const { nome } = req.body
+    res.json({ message: "Adicionado com sucesso"})
+})
+app.put('/api-25/ccb-comum/:id', (req, res) => {
+    const { id } = req.params
+    const { nome } = req.body
+    res.json({ message: "Atualizado com sucesso"})
+})
+app.delete('/api-25/ccb-comum/:id', (req, res) => {
+    const { id } = req.params
+    res.json({ message: "deletado com sucesso"})
 })
 
 app.listen(port, () => {('/api-25/suplemento', (req, res) => {
